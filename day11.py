@@ -54,7 +54,7 @@ given([[3,4,2,1] , [1,2,3] , [5,4,3,1]])
 
 # Soal no 4
 def count_words(words):
-    word_list=words.split(' ')
+    word_list=words.lower().split(' ')
     count = {}
     for i in word_list:
         if (i in count.keys()):
@@ -62,5 +62,7 @@ def count_words(words):
         else:
             count[i]=1
     for key,value in count.items():
-        print(f'Jumlah kata \'{key.capitalize()}\' adalah sebanyak {value}')
+        print(f"Jumlah kata '{key.capitalize()}' adalah sebanyak {value}'")
+
 count_words('jangan jangan kamu adalah aku')
+count_words('Aku tidak tahu kamu seperti kamu tidak tahu aku')
